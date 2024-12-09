@@ -194,7 +194,11 @@ void loading(int hw) {
 	mvprintw(17, 75, "Loading...");
 	for (int i = 0; i < hw; i++) {
 		for (int i = 0; i < 55; i++) {
-	        mvaddch(20, 50 + i, ACS_CKBOARD);
+	        start_color(); 
+	        init_pair(1, COLOR_CYAN, COLOR_BLACK);
+	        attron(COLOR_PAIR(1));
+	       mvaddch(20, 50 + i, ACS_CKBOARD);
+	        attroff(COLOR_PAIR(1));
 	        refresh();
 	        napms(10);
 	    }
