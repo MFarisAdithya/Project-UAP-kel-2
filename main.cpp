@@ -13,6 +13,7 @@
 //#include "game3.h"
 //#include "gameover.h"
 //#include "enemy.h"
+//#include "apasi.h"
 #include "menu.h"
 using namespace std;
 
@@ -26,6 +27,9 @@ int main() {
 	
     keypad(stdscr, TRUE); 
 	//loading(1);
+	start_color();
+    init_pair(1, COLOR_GREEN, COLOR_BLACK);
+    init_pair(2, COLOR_BLUE, COLOR_WHITE);
 	WINDOW *menu = newwin(12, 12, 12, 12);
     box(menu,0,0);
 	wrefresh(menu);
